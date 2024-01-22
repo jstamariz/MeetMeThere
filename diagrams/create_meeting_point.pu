@@ -1,0 +1,27 @@
+@startuml create_meeting_point
+|Usuario|
+start
+:Iniciar creación de Punto de Encuentro;
+|Usuario|
+:Seleccionar ubicación en el mapa;
+:Establecer detalles del evento;
+|Sistema|
+:Validar la información ingresada;
+if (Información válida?) then (Sí)
+  :Crear Punto de Encuentro;
+  |Sistema|
+  :Generar identificador único para el evento;
+  :Guardar detalles del evento en la base de datos;
+  :Notificar al creador sobre la creación exitosa;
+else (No)
+  |Sistema|
+  :Mostrar mensaje de error al usuario;
+  stop
+endif
+|Usuario|
+:Invitar participantes al evento;
+|Sistema|
+:Enviar notificaciones a los participantes invitados;
+|Usuario|
+stop
+@enduml

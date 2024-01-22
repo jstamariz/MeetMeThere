@@ -1,0 +1,16 @@
+@startuml send_notifications
+|Usuario|
+start
+:Seleccionar Acción que Genera Notificación;
+|Sistema|
+if (Acción Requiere Notificación?) then (Sí)
+  :Generar Contenido de la Notificación;
+  |Usuario|
+  :Confirmar Envío de Notificación;
+  |Sistema|
+  :Enviar Notificación a Usuarios Pertinentes;
+else (No)
+  stop
+endif
+stop
+@enduml

@@ -1,0 +1,35 @@
+@startuml state
+
+state NotCreated {
+  [*] --> NotCreated
+  NotCreated --> Created : Crear
+}
+
+state Created {
+  [*] --> Created
+  Created --> Active : Iniciar
+}
+
+state Active {
+  [*] --> Active
+  Active --> Completed : Completar
+  Active --> Canceled : Cancelar
+}
+
+state Completed {
+  [*] --> Completed
+}
+
+state Canceled {
+  [*] --> Canceled
+}
+
+[*] --> NotCreated : Crear Punto de Encuentro
+NotCreated --> Created : Punto de Encuentro Creado
+Created --> Active : Iniciar Punto de Encuentro
+Active --> Completed : Punto de Encuentro Completado
+Active --> Canceled : Cancelar Punto de Encuentro
+Completed --> [*] : Fin del Punto de Encuentro
+Canceled --> [*] : Punto de Encuentro Cancelado
+
+@enduml

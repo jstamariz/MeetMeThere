@@ -1,0 +1,23 @@
+@startuml invite_participants
+|Usuario|
+start
+:Seleccionar Punto de Encuentro existente;
+|Sistema|
+:Mostrar lista de participantes actuales;
+|Usuario|
+:Seleccionar usuarios para invitar;
+|Sistema|
+:Validar la selección de usuarios;
+if (¿Selección válida?) then (Sí)
+  |Usuario|
+  :Confirmar la invitación;
+  |Sistema|
+  :Enviar notificaciones a los usuarios invitados;
+  |Usuario|
+else (No)
+  |Sistema|
+  :Mostrar mensaje de error al usuario;
+  stop
+endif
+stop
+@enduml
