@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{40A015CB-46F7-4137-B719-7F05AFA52802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapService", "services\MapService\MapService.csproj", "{AC223C28-4862-4C09-9EE7-16183D7934CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "services\NotificationService\NotificationService.csproj", "{5E7E339F-431B-4DD8-8FB0-C7870A2A819E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingPointService", "services\MeetingPointService\MeetingPointService.csproj", "{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC223C28-4862-4C09-9EE7-16183D7934CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC223C28-4862-4C09-9EE7-16183D7934CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC223C28-4862-4C09-9EE7-16183D7934CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC223C28-4862-4C09-9EE7-16183D7934CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7E339F-431B-4DD8-8FB0-C7870A2A819E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7E339F-431B-4DD8-8FB0-C7870A2A819E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7E339F-431B-4DD8-8FB0-C7870A2A819E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7E339F-431B-4DD8-8FB0-C7870A2A819E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC223C28-4862-4C09-9EE7-16183D7934CE} = {40A015CB-46F7-4137-B719-7F05AFA52802}
+		{5E7E339F-431B-4DD8-8FB0-C7870A2A819E} = {40A015CB-46F7-4137-B719-7F05AFA52802}
+		{F931C7BB-4F0D-4BC5-AA5D-380C566F68EE} = {40A015CB-46F7-4137-B719-7F05AFA52802}
+	EndGlobalSection
+EndGlobal
