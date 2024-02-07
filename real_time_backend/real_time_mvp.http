@@ -1,0 +1,6 @@
+@real_time_mvp_HostAddress = http://localhost:5124
+
+GET {{real_time_mvp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
