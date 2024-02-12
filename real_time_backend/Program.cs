@@ -20,6 +20,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseWebSockets();
 
+var loggingService = new LoggingService();
+
 
 app.Use(async (context, next) =>
 {
@@ -34,7 +36,6 @@ app.Use(async (context, next) =>
                 var buffer = new byte[1024 * 4];
                 var result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
                 var message = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                Console.WriteLine(message);
 
                 if (String.IsNullOrEmpty(message)) return;
 
@@ -52,6 +53,7 @@ app.Use(async (context, next) =>
                 );
 
                 string response = $"{lat};{lon};{distance}";
+                loggingService.Write(response);
                 await webSocket.SendAsync(Encoding.UTF8.GetBytes(response),
                     System.Net.WebSockets.WebSocketMessageType.Text,
                     true,
